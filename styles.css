@@ -1,0 +1,127 @@
+/* Estilos generales y para el cuerpo de la página */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f3f4f6; /* gris claro */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 1rem;
+}
+
+/* Contenedor principal de la calculadora */
+.calculator-container {
+    background-image: url(https://co.pinterehttps://pin.it/4BtwzGMPsst.com/pin/1759287348645835/);
+    padding: 2rem;
+    border-radius: 1rem; /* bordes más redondeados */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 450px;
+}
+
+/* Título principal */
+h1 {
+    font-size: 1.5rem; /* 24px */
+    font-weight: 700;
+    color: #1f2937; /* gris oscuro */
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+/* Subtítulo o texto descriptivo */
+.subtitle {
+    color: #6b7280; /* gris medio */
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Grupos de entrada (label + input) */
+.input-group {
+    margin-bottom: 1.25rem;
+}
+
+/* Etiquetas de los campos de entrada */
+label {
+    display: block;
+    color: #374151; /* gris */
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Campos de entrada numéricos */
+input[type="number"] {
+    width: 100%;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db; /* borde gris claro */
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #3b82f6; /* azul */
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+/* Párrafo con información de la nota mínima */
+.info-nota {
+    text-align: center;
+    font-size: 0.875rem; /* 14px */
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+}
+
+/* Botón principal */
+button {
+    width: 100%;
+    background-color: #2563eb; /* azul oscuro */
+    color: #ffffff;
+    font-weight: 700;
+    padding: 0.85rem 0;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #1d4ed8; /* azul más oscuro */
+    transform: scale(1.02);
+}
+
+/* Contenedor para el resultado */
+.resultado-container {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+/* Estilos para el estado de éxito (verde) */
+.success {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+/* Estilos para el estado de error (rojo) */
+.error {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+/* Estilos para el estado informativo (azul) */
+.info {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.resultado-container strong {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
