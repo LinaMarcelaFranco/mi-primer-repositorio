@@ -1,0 +1,61 @@
+/* Estilos generales, la mayoría provienen de la configuración de Tailwind en el index.html */
+body {
+    /* Cambiamos la fuente para un look más "Matrix" o tecnológico */
+    font-family: 'Consolas', 'Courier New', monospace; 
+    background-color: #0d1117; /* Fondo oscuro para el efecto */
+    display: flex; /* Centrado del contenido */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Estilos de Tipografía para el resultado (ajustando el tamaño de la nota requerida) */
+#resultado strong {
+    font-size: 1.5rem; /* Resaltar la nota de manera más clara */
+    font-weight: 700;
+}
+
+/* Estilos para los iconos en el resultado */
+#resultado i {
+    font-size: 1.25rem;
+}
+
+/* --- ESTILOS PARA EL FONDO DINÁMICO --- */
+
+#dynamic-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0; /* Aseguramos que esté detrás de la calculadora */
+}
+
+/* Estilo para cada "partícula" o símbolo flotante */
+.symbol {
+    position: absolute;
+    color: #00ff41; /* Color verde Matrix */
+    opacity: 0.6;
+    user-select: none;
+    pointer-events: none;
+    animation-name: floatUp;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* Definición de la animación de flotar hacia arriba */
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-10vh) rotate(360deg);
+        opacity: 0;
+    }
+}
